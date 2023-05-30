@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
-import { Repository } from 'typeorm';
-import { BillStockEntity } from './entity/bill-stock.entity';
-import { Observable } from 'rxjs';
-import { billTypes } from './model/bill-types';
 import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+
+import { BillStockEntity } from './entity/bill-stock.entity';
+import { billTypes } from './model/bill-types';
 import { UpdateBillStockRequest } from './dto/update-bill-stock-request';
 
 @Injectable()

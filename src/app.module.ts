@@ -6,6 +6,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { BillStockModule } from './bill-stock/bill-stock.module';
 import { BillStockEntity } from './bill-stock/entity/bill-stock.entity';
+import { TransactionModule } from './transaction/transaction.module';
+import { TransactionEntity } from './transaction/entity/transaction.entity';
 
 @Module({
     imports: [
@@ -19,12 +21,13 @@ import { BillStockEntity } from './bill-stock/entity/bill-stock.entity';
                 username: configService.get('DB_USERNAME'),
                 password: configService.get('DB_PASSWORD'),
                 database: configService.get('DB_NAME'),
-                entities: [BillStockEntity],
+                entities: [BillStockEntity, TransactionEntity],
                 synchronize: true,
             }),
             inject: [ConfigService],
         }),
         BillStockModule,
+        TransactionModule,
     ],
     controllers: [AppController],
     providers: [AppService],
