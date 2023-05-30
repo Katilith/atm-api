@@ -11,7 +11,7 @@ export class BillStockController {
     }
 
     @Patch()
-    async updateBillStocks(@Body() updateBillStockRequest: UpdateBillStockRequest): Promise<BillStockEntity[]> {
+    async updateBillStocks(@Body() updateBillStockRequest: Up<dateBillStockRequest): Promise<BillStockEntity[]> {
         if (!updateBillStockRequest?.stock?.length) {
             throw new BadRequestException(`No bills provided to update!`);
         }
