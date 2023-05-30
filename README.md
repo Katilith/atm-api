@@ -1,7 +1,8 @@
 # ATM API Project
 
-ATM API project, utilizing [NestJS](https://github.com/nestjs/nest).
+ATM API project, utilizing [NestJS v9](https://github.com/nestjs/nest).
 
+The matching frontend for this project can be found here: [https://github.com/Kikorono/atm-ui](https://github.com/Kikorono/atm-ui)
 
 ## Prerequisites
 
