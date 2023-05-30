@@ -11,7 +11,7 @@ import { TransactionEntity } from './transaction/entity/transaction.entity';
 
 @Module({
     imports: [
-        ConfigModule.forRoot({ isGlobal: true }),
+        ConfigModule.forRoot({isGlobal: true}),
         TypeOrmModule.forRootAsync({
             imports: [ConfigModule],
             useFactory: (configService: ConfigService) => ({
